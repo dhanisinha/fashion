@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionNova Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        body {
+            color: #333;
+        }
+
+        
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+
+        .navbar a:hover {
+            color: #ff6600;
+        }
+
+        
+        .cart {
+            color: white;
+            font-size: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .cart-count {
+            background-color: #ff6600;
+            color: white;
+            border-radius: 50%;
+            font-size: 14px;
+            padding: 2px 8px;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
+
+
+.hero {
+            background-image: url('hero-image.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #170813;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            background-color: #ffd700;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .hero button:hover {
+            background-color: #ffc107;
+        }
+
+        
+        .categories {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .categories h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .category-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .category-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .category-item:hover {
+            transform: scale(1.05);
+        }
+
+        
+        .products {
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-card h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            color: #777;
+            margin: 5px 0;
+        }
+
+        .product-card button {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .product-card button:hover {
+            background-color: #333;
+        }
+
+
+        
+        .products {
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-card h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            color: #777;
+            margin: 5px 0;
+        }
+
+        .product-card button {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .product-card button:hover {
+            background-color: #333;
+        }
+
+
+        
+
+        
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        body{
+            background-image: url(https://wallpaperaccess.com/full/4322577.png) 
+            
+            
+            
+            
+            
+            
+            ;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <h1>FashionNova Shop</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Sale</a>
+            <a href="#">Accessories</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products">
+        </div>
+        </nav>
+        <div class="cart">
+            <span>🛒</span>
+            <span class="cart-count" id="cart-count">0</span>
+        </div>
+    </div>
+
+    
+    <section class="hero">
+        <div>
+            <h2> Latest Fashion Collection</h2>
+            <p> Discover the Emerging Fashion & Current trends Here </p>
+            <button>Shop Now</button>
+        </div>
+    </section> 
+
+        
+        <section class="categories">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-item">
+                    
+                    <h3>Men</h3>
+                </div>
+                <div class="category-item">
+                    
+                    <h3>Women</h3>
+                </div>
+                <div class="category-item">
+                    
+                    <h3>Accessories</h3>
+                </div>
+                </div>
+        </section>
+
+    
+    <section class="products">
+        
+        <div class="product-card">
+            <img src="https://www.fashionbeans.com/wp-content/uploads/2022/12/axelarigato_pufferjacket.jpg" alt="Product 1">
+            <h3>Stylish Jacket</h3>
+            <p>₹4999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://assets-mobilebaymag-com.s3.amazonaws.com/uploads/2017/01/0090-Jennie-Tewell-Photography-JEN18139_edit.jpg" alt="Product 2">
+            <h3>Boho Bliss</h3>
+            <p>₹1999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://i.pinimg.com/originals/21/d5/10/21d5109bb85b29ef3295bddb5468fdb2.jpg" alt="Product 3">
+            <h3>Retro Revival</h3>
+            <p>₹2999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://www.happywedding.app/blog/wp-content/uploads/2023/06/Jodhpuri-Bandhgala-Suits.jpg" alt="Product 4">
+            <h3>Night Luxe</h3>
+            <p>₹4999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.dLDT-HEXjHQA7IrCv6SKEgHaHa&pid=Api&P=0&h=180" alt="Product 5">
+            <h3>Active Essentials</h3>
+            <p>₹3999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        
+        <div class="product-card">
+            <img src="https://i.pinimg.com/736x/e8/62/3e/e8623e68af78949762664b09fd381a21--eclectic-design-needle-and-thread.jpg" alt="Product 6">
+            <h3>Green Threads</h3>
+            <p>₹4999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://i.pinimg.com/originals/8c/89/81/8c8981866b8350410019d7fbcd0fde7f.jpg" alt="Product 7">
+            <h3>New Prep</h3>
+            <p>₹2999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://i.pinimg.com/originals/1a/a5/88/1aa58898c2f3233dfb648d952c9be0e6.jpg" alt="Product 8">
+            <h3>Dark Mode</h3>
+            <p>₹3999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://i.pinimg.com/originals/de/c6/c6/dec6c65404dc80752f58339c0aa82786.jpg" alt="Product 9">
+            <h3>Sport Mode</h3>
+            <p>₹2099.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://www.collegefashion.net/wp-content/uploads/2021/06/princess-polly-y2k-1134x1536.jpg" alt="Product 10">
+            <h3>Y2K Fashion</h3>
+            <p>₹4999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        
+        <div class="product-card">
+            <img src="https://i.pinimg.com/originals/aa/a8/3e/aaa83ecfc764fd99828e7741eedcef8d.jpg" alt="Product 11">
+            <h3>Sleek Simplicity</h3>
+            <p>₹6999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.SQNYwmNi-AsBWPlav24i_QHaHa&pid=Api&P=0&h=180" alt="Product 12">
+            <h3>Bohemian Charm</h3>
+            <p>₹1999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.I-wYPqdqN7titpiMrLWl7wHaJQ&pid=Api&P=0&h=180" alt="Product 13">
+            <h3>Timeless Vintage</h3>
+            <p>₹9999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://img1.etsystatic.com/050/1/7935240/il_fullxfull.730438955_hg76.jpg" alt="Product 14">
+            <h3>Bold Statements</h3>
+            <p>₹8999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://i.pinimg.com/originals/a9/ba/2d/a9ba2df953729b27b1abd9d2439bd172.jpg" alt="Product 15">
+            <h3>Luxury Classics</h3>
+            <p>₹10999.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+            
+            
+        
+    </section>
+
+    
+    <div class="footer">
+        <p>&copy;FashionNova Shop | All Rights Reserved</p>
+    </div>
+
+    
+    <script>
+        
+        let cartCount = 0;
+
+        
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+        
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                cartCount++;
+                document.getElementById('cart-count').textContent = cartCount;
+                alert('Item added to cart!');
+            });
+        });
+    </script>
+</body>
+</html>
